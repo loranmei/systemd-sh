@@ -1,0 +1,12 @@
+[Unit]
+Description=omap-baseserver8027
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/bin/sh /root/insurance/sysinsurance-baseserver/omap-baseserver8027.sh -start
+ExecStop=/bin/sh /root/insurance/sysinsurance-baseserver/omap-baseserver8027.sh -stop
+ExecReload=/bin/sh /root/insurance/sysinsurance-baseserver/omap-baseserver8027.sh -restart
+
+[Install]
+WantedBy=multi-user.target

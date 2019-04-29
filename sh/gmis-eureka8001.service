@@ -1,0 +1,12 @@
+[Unit]
+Description=gmis-eureka8001
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/bin/sh /root/insurance/eureka/gmis-eureka8001.sh -start
+ExecStop=/bin/sh /root/insurance/eureka/gmis-eureka8001.sh -stop
+ExecReload=/bin/sh /root/insurance/eureka/gmis-eureka8001.sh -restart
+
+[Install]
+WantedBy=multi-user.target
